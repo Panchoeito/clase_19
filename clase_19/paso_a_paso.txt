@@ -1,0 +1,28 @@
+PASOS:
+
+######   Entorno   ######
+pipenv shell
+pipenv install django==3.2 **o requirements.txt**
+
+######   Repo   ######
+django-admin startproject Coder
+cd Coder
+python manage.py migrate
+python manage.py startapp Staff
+(En settings.py agregamos la app)
+(Creamos los models)
+python manage.py check
+python manage.py makemigrations
+python manage.py migrate
+
+######   Git y github   ######
+
+git init
+Crear archivo .gitignore (/__pycache__/, *.pyc, Pipfile, *.lock, db.sqlite3)
+git add .
+git commit -m “Primer commit”
+
+( Repo en github con readme )
+git remote add origin <link_repo>
+git pull origin main —rebase
+git push —set-upstream origin main
